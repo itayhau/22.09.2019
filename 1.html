@@ -1,0 +1,22 @@
+
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+<body>
+<script>
+
+
+$.ajax({
+    url: "https://localhost:44385/api/values",
+    type: 'GET',
+    dataType: 'json', // added data type
+    headers: {
+    "Authorization": "Basic " + btoa("itay:1234")
+    },
+    success: function(res) {
+        console.log(res);
+        alert(res);
+    }
+});
+</script>
+</body>
