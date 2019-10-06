@@ -21,7 +21,12 @@ namespace WebWithPage.Controllers
 
             var c = Request.QueryString;
             var id = c.Get("id");
-
+            
+            //  add Views/View/Error.html
+            //     <p style="background:red">
+            //     <b>Bad Error!!</b>
+            //     </p>
+            //  return new FilePathResult("~/Views/View/Error.html", "text/html");
             return View("ConfirmEmail");
         }
     }
